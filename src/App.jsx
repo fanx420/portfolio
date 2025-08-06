@@ -12,9 +12,9 @@ function App() {
         <DarkVeil />
       </div>
 
-      {/* <div className="fixed top-5 left-0 right-0 z-10 flex justify-center items-center">
+      <div className="fixed top-5 left-0 right-0 z-10 flex justify-center items-center">
         <NavBar />
-      </div> */}
+      </div>
 
       <div className="relative z-0 flex justify-center items-center min-h-screen">
         <Content />
