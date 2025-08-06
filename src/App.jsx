@@ -19,7 +19,6 @@ function App() {
       <div className="relative z-0 flex justify-center items-center min-h-screen">
         <Content />
       </div>
-   
     </div>
     </>
     
