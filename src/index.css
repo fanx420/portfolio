@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  @apply bg-black text-white font-sans;
+}
+ul{
+  @apply flex flex-col md:flex-row hover:bg-amber-50 hover:text-black transition-colors duration-300 rounded-2xl p-2 cursor-pointer;
+}
+nav{
+  @apply flex flex-col md:flex-row;
+}
