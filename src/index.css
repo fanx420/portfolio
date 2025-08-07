@@ -11,8 +11,31 @@ nav{
   @apply flex flex-col md:flex-row;
 }
 button{
-  @apply cursor-pointer
+  @apply cursor-pointer;
+  animation: fade-in 0.5s ease-in-out forwards;
 }
 a{
-  @apply cursor-pointer
+  @apply cursor-pointer;
+  animation: fade-in 1s ease-in-out forwards;
+}
+h1,h2{
+  animation: fade-in 0.5s ease-in-out backwards;
+}
+p{
+  animation: fade-in 0.7s ease-in-out forwards;
+}
+span{
+  animation: fade-in 1s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
 }

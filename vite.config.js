@@ -11,6 +11,15 @@ export default defineConfig({
           fontFamily: {
             sans: ['DM Sans', 'sans-serif'],
           },
+          keyFrames: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
+          },
+          animation: {
+            fadeIn: 'fadeIn 0.5 ease-in forwards',
+          }
         }
       }
     })
