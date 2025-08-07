@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import "@fontsource/dm-sans";
 @import "tailwindcss";
 
 :root {
@@ -9,4 +9,10 @@ ul{
 }
 nav{
   @apply flex flex-col md:flex-row;
+}
+button{
+  @apply cursor-pointer
+}
+a{
+  @apply cursor-pointer
 }
