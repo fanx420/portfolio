@@ -1,12 +1,17 @@
 import './App.css'
 import Squares from './components/Squares'
-import NavBar from './layouts/NavBar'
-import Content from './components/Content'
 import Card from './components/Card';
 import ProfileCard from './components/ProfileCard';
-import avatar from './assets/avatar.svg';
+import Avatar from './assets/avatar.svg';
+import Icon from "./assets/bg.svg";
 
 function App() {
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = './Zosa_CV.pdf';
+    link.download = 'Zosa_CV.pdf';
+    link.click();
+  };
   return (
     <>
       <div className="relative w-full min-h-screen overflow-hidden">
@@ -20,32 +25,48 @@ function App() {
           />
         </div>
 
-        {/* Main content wrapper with grid */}
         <div className="relative grid grid-cols-1 md:grid-cols-2 p-4">
           {/* Left side */}
           <div className="flex flex-col z-10">
             <Card
-              title={"Hello! I'm Kaleb"}
-              descriptiion={"A passionate web developer with a love for creating beautiful and functional websites."}
+              background="bg-black"
+              image={Avatar}
+              imageStyle="absolute top-20 left-1/2 -translate-x-1/2 w-[300px] z-0 md:z-0 md:top-5 md:left-[60px] md:translate-x-0 lg:hidden mt-10 md:mt-0"
+              contentStyle='md:mt-30 lg:mt-0 xl:mt-0 p-3'
+              title={<>Hello <br />I'm <span className=''>Kaleb</span></>}
+              titleStyle="text-center sm:text-center md:text-start mb-55 md:mb-0 lg:mb-0 xl:mb-0 text-6xl relative lg:text-7xl md:text-5xl font-bold"
+              description={"A passionate web developer with a love for creating beautiful and functional websites."}
+              badge={<><div className="md:hidden z-50  py-5 rounded-full text-white text-sm font-medium border border-green-500 bg-green-500/5 backdrop-blur-md shadow-[0_0_8px_#22c55e] text-center w-[200px] mx-auto">Open for full time work</div></>}
               pills={["JavaScript", "React", "CSS", "HTML", "Node.js", "MySQL", "Tailwind CSS", "PHP", "Laravel", "GIT", "Bootstrap"]}
-            />
-            <Card />
-            <Card><div className="flex gap-4 items-center justify-center ">
-              <button className='font-semibold bg-white text-black border rounded-full justify-center text-2xl w-2/4 p-2 mb-4 hover:bg-black hover:text-white transition-colors duration-300'>Contact Me</button>
-              <button className='font-semibold border rounded-full justify-center text-2xl w-1/4 p-2 mb-4 hover:bg-white hover:text-black transition-colors duration-300'>CV</button>
-            </div>
+            >
 
+              <div className="flex gap-3 items-center justify-center p-1">
+                <button className='font-semibold bg-white text-black border rounded-full text-xl w-full md:w-2/4 p-3 hover:bg-black hover:text-white transition-colors duration-300'>
+                  Contact Me
+                </button>
+                <button onClick={handleDownload} className='font-semibold border rounded-full text-xl w-1/4 p-3 hover:bg-white hover:text-black transition-colors duration-300'>
+                  CV
+                </button>
+              </div>
             </Card>
+            <Card>
+              <iframe className='rounded-3xl' title="Google Map"
+                src="https://www.google.com/maps/d/u/3/embed?mid=1Re6sFurELVTmByK7U_tGvSLdjt1mPAI&ehbc=2E312F&noprof=1"
+                width="100%" height="150"></iframe>
+            </Card>
+
           </div>
           {/* Profile Card with responsive visibility */}
-          <div className="absolute inset-0 hidden lg:flex items-center justify-center">
+          <div className="absolute inset-0 md:hidden lg:flex items-center justify-center">
             <ProfileCard
               className='z-20'
               name="Kaleb Dion Francis Zosa"
               title="Full Stack Developer"
               handle="kalebdionfrancisz@gmail.com"
-              avatarUrl={avatar}
-              showUserInfo={false}
+              status='Open for full time work'
+              iconUrl={Icon}
+              avatarUrl={Avatar}
+              showUserInfo={true}
               enableTilt={true}
               enableMobileTilt={false}
             />
@@ -53,11 +74,14 @@ function App() {
 
           {/* Right side */}
           <div className="flex flex-col lg:items-end z-10">
-            <Card>
-                <h2 className='text-2xl font-bold animate-fadeIn'>Socials</h2>
-                <a href="https://github.com/fanx420" target='_blank'>Github</a>
-
-            </Card>
+            <Card
+              title={"Experience"}
+              titleStyle='text-lg p-2 font-semibold'
+            />
+            <Card
+              title="Latest Projects"
+              titleStyle='text-lg p-2 font-semibold'
+            />
           </div>
         </div>
 

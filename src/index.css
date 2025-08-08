@@ -18,7 +18,7 @@ a{
   @apply cursor-pointer;
   animation: fade-in 1s ease-in-out forwards;
 }
-h1,h2{
+h1,h2,h3,h4,h5,h6{
   animation: fade-in 0.5s ease-in-out backwards;
 }
 p{
@@ -26,6 +26,12 @@ p{
 }
 span{
   animation: fade-in 1s ease-in-out forwards;
+}
+.badge{
+  animation: fade-in 1.2s ease-in-out forwards;
+}
+.picture{
+  animation: fade-in 0.7s ease-in-out forwards;
 }
 
 @keyframes fade-in {

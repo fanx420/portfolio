@@ -1,13 +1,30 @@
-export default function Card({ title, descriptiion, className ="", pills = [], children }) {
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
+export default function Card({ title, description, className = "", pills = [], children, image, imageStyle = "", contentStyle = "", childrenClassName = "", titleStyle = "", badge }) {
+    useEffect(() => {
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+        AOS.refresh();
+    }, []);
+
     return (
-        <div className="card rounded-2xl xl:w-[60%] lg:w-[60%] md:w-[90%] sm:w-full p-6 bg-gradient-to-b from-[rgb(20,20,57)] to-[#181717] text-white my-2">
-            <div className="mb-4 mt-4 text-start ">
-                <h1 className="text-6xl lg:text-7xl md:text-5xl font-bold">{title}</h1>
-            </div>
-            <div className="mt-5">
-                <p className="text-lg">{descriptiion}</p>
-            </div>
-            <div className="flex flex-row flex-wrap gap-4 mt-4">
+        <div className="card rounded-2xl xl:w-[65%] lg:w-[60%] md:w-[97%] h-auto sm:w-full p-4 bg-gradient-to-b from-[rgb(20,20,57)] to-[#181717] text-white my-2"
+            data-aos="fade-up">
+                <img className={`picture ${imageStyle}`} src={image} alt="" />
+            <div className={`${contentStyle}`}>
+                <div className={` ${titleStyle} `} >
+
+                    <h1>{title}</h1>
+                </div>
+                <div className="mt-4 text-center md:text-start">
+                    <div className="badge mb-4">{badge}</div>
+                    <p className="text-lg">{description}</p>
+                </div>
+                <div data-aos="fade-up" className="flex flex-row flex-wrap gap-4 mt-4">
                     {pills.map((pill, index) => (
                         <span
                             key={index}
@@ -16,10 +33,12 @@ export default function Card({ title, descriptiion, className ="", pills = [], c
                             {pill}
                         </span>
                     ))}
-            </div>
-             <div className={`${className}`}>{children}</div>
+                </div>
 
-           
+            </div>
+
+
+            <div className={`${childrenClassName}`}>{children}</div>
         </div>
     )
 }

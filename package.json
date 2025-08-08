@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@fontsource/dm-sans": "^5.2.6",
+    "@react-google-maps/api": "^2.20.7",
     "@tailwindcss/vite": "^4.1.11",
+    "aos": "^2.3.4",
     "gasp": "^0.0.2",
     "gsap": "^3.13.0",
     "ogl": "^1.0.11",
