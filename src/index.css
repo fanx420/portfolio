@@ -33,6 +33,10 @@ span{
 .picture{
   animation: fade-in 0.7s ease-in-out forwards;
 }
+input, textarea{
+  @apply border border-gray-300 rounded-lg p-2 mb-4 w-full;
+  animation: fade-in 0.5s ease-in-out forwards;
+}
 
 @keyframes fade-in {
   from {
