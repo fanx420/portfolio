@@ -13,7 +13,7 @@ export default function Card({ title, description, className = "", pills = [], c
 
     return (
         
-        <div className="card rounded-2xl xl:w-[65%] lg:w-[60%] md:w-[97%] h-auto sm:w-full p-4 bg-gradient-to-b from-[rgb(20,20,57)] to-[#181717] text-white my-2"
+        <div className="card rounded-2xl xl:w-[65%] lg:w-[60%] md:w-[97%] h-auto sm:w-full lg:p-4 p-2 bg-gradient-to-b from-[rgb(20,20,57)] to-[#181717] text-white my-2"
             data-aos="fade-up">
                 <img className={`picture ${imageStyle}`} src={image} alt="" />
             <div className={`${contentStyle}`}>
@@ -26,7 +26,7 @@ export default function Card({ title, description, className = "", pills = [], c
                     <div className="badge mb-4">{badge}</div>
                     <p className="text-lg">{description}</p>
                 </div>
-                <div data-aos="fade-up" className="flex flex-row flex-wrap gap-4 mt-4">
+                <div data-aos="fade-up" className="flex flex-row flex-wrap gap-2 mt-4">
                     {pills.map((pill, index) => (
                         <span
                             key={index}

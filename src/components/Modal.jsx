@@ -13,7 +13,7 @@ export default function Modal({ isOpen, setIsOpen, children }) {
     if (!isOpen) return null;
 
     return (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 bg-backdrop-blur-xl"
+        <div className="fixed inset-0 z-[9998] flex items-center justify-center bg-black/70 bg-backdrop-blur-xl"
             onClick={() => setIsOpen(false)}>
             <div className="relative bg-gradient-to-b from-[rgb(20,20,57)] to-[#181717] rounded-2xl w-auto text-center p-5 overflow-y-auto h-[85vh] shadow-lg"
                 onClick={(e) => e.stopPropagation()}
