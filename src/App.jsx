@@ -12,6 +12,7 @@ import FacebookLogo from './assets/facebook_logo.svg';
 import InstagramLogo from './assets/instagram_logo.svg';
 import LinkedinLogo from './assets/linkedin_logo.svg';
 import Toast, { showSuccess } from './components/Toast';
+import CardList from './components/CardList';
 function App() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
@@ -25,8 +26,8 @@ function App() {
 
 
   return (
-    <>      
-      <Toast /> 
+    <>
+      <Toast />
       <div className="relative w-full min-h-screen overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="">
@@ -38,7 +39,7 @@ function App() {
             borderColor='#271e37'
             hoverFillColor='#22222'
           />
-        </div>    
+        </div>
 
         <div className="relative grid grid-cols-1 md:grid-cols-2 p-4">
           {/* Left side */}
@@ -105,10 +106,55 @@ function App() {
                 <p className='text-sm text-gray-500'>March 2025 - June 2025</p>
               </div>
             </Card>
-            <Card
-              title="Latest Projects"
-              titleStyle='text-3xl p-2 font-semibold'
-            />
+              <Card
+                title="Latest Projects"
+                titleStyle='text-3xl p-2 font-semibold'
+                cardStyle='overflow-y-scroll max-h-[450px]'
+              >
+                <CardList
+                  title={"Project 1"}
+                  description={"Test project"}
+                  img={GithubLogo}
+                  techs={["React.js", "Laravel"]}
+
+                />
+
+                <CardList
+                  title={"Project 1"}
+                  description={"Test project"}
+                  img={GithubLogo}
+                  techs={["React.js", "Laravel"]}
+
+                />
+
+                <CardList
+                  title={"Project 1"}
+                  description={"Test project"}
+                  img={GithubLogo}
+                  techs={["React.js", "Laravel"]}
+
+                />
+
+                <CardList
+                  title={"Project 1"}
+                  description={"Test project"}
+                  img={GithubLogo}
+                  techs={["React.js", "Laravel"]}
+
+                />
+
+                <CardList
+                  title={"Project 1"}
+                  description={"Test project"}
+                  img={GithubLogo}
+                  techs={["React.js", "Laravel"]}
+
+                />
+
+
+
+              </Card>
+
           </div>
 
         </div>
