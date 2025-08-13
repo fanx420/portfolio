@@ -11,8 +11,6 @@ export default function Form() {
     const date = new Date();
     const currentDate = date.toISOString().split('T')[0]; 
 
-    console.log(apiKey, serviceId, templateId);
-
     const sendEmail = (e) => {
         e.preventDefault();
 
