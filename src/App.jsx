@@ -13,6 +13,19 @@ import InstagramLogo from './assets/instagram_logo.svg';
 import LinkedinLogo from './assets/linkedin_logo.svg';
 import Toast, { showSuccess } from './components/Toast';
 import CardList from './components/CardList';
+import PortfolioV1 from './assets/Thumbnails/PortfolioV1.png'
+import Switzerland_Showcase from './assets/Thumbnails/Switzerland_showcase.png'
+import ActivityRepo from './assets/Thumbnails/Activity_repository.png'
+import AOTDb from './assets/Thumbnails/Attack_On_Titan_Database.png'
+import AOTGuide from './assets/Thumbnails/Series_guide.png'
+import TaskManagement from './assets/Thumbnails/Task_management_system.png'
+import CampaignWebsite from './assets/Thumbnails/Campaign_website.png'
+import Calc from './assets/Thumbnails/Calc.png'
+import Certicode from './assets/Thumbnails/Certicode.png'
+import SimpleBar from "simplebar-react";
+import "simplebar-react/dist/simplebar.min.css";
+import { FaCode, FaServer, FaCloudUploadAlt, FaDatabase, FaUsers } from "react-icons/fa";
+
 function App() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
@@ -53,7 +66,7 @@ function App() {
               titleStyle="text-center sm:text-center md:text-start mb-55 md:mb-0 lg:mb-0 xl:mb-0 text-6xl relative lg:text-7xl md:text-5xl font-bold"
               description={"Full-stack developer crafting fast, functional, and visually engaging websites."}
               badge={<><div className="md:hidden z-50  py-5 rounded-full text-white text-sm font-medium border border-green-500 bg-green-500/5 backdrop-blur-md shadow-[0_0_8px_#22c55e] text-center w-[200px] mx-auto">Open for full time work</div></>}
-              pills={["JavaScript", "React", "CSS", "HTML", "Node.js", "MySQL", "Tailwind CSS", "PHP", "Laravel", "GIT", "Bootstrap"]}
+              pills={["JavaScript", "React", "CSS", "Tailwind CSS", "Bootsrap", "HTML", "Node.js", "MySQL", "PHP", "Laravel", "GIT",]}
             >
 
               <div className="flex gap-2 items-center justify-center p-1">
@@ -65,10 +78,6 @@ function App() {
                 </button>
               </div>
             </Card>
-
-            <Modal>
-              <button className='bg-white text-black p-2 rounded'>Open Modal</button>
-            </Modal>
 
             <Card>
               <iframe className='rounded-3xl' title="Google Map"
@@ -97,63 +106,121 @@ function App() {
 
           <div className="relative flex flex-col lg:items-end z-5">
             <Card
-              title={"Experience"}
-              titleStyle='text-3xl p-2 font-semibold'
+              title={"What I Can Offer"}
+              titleStyle="text-3xl p-2 font-semibold"
             >
-              <div className="p-2">
-                <h3 className='text-xl'>Full Stack Web Developer (Intern)</h3>
-                <p className='text-md'>SupSoft Technologies</p>
-                <p className='text-sm text-gray-500'>March 2025 - June 2025</p>
+              <div className="p-2 space-y-3">
+                <div className="flex items-start gap-3 bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition">
+                  <FaCode className="text-blue-400 mt-1" />
+                  <p className="text-sm text-gray-200">
+                    End-to-end web development with <span className="font-semibold text-white">React.js</span>,
+                    <span className="font-semibold text-white"> Laravel</span>, and
+                    <span className="font-semibold text-white"> MySQL</span>.
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3 bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition">
+                  <FaCloudUploadAlt className="text-purple-400 mt-1" />
+                  <p className="text-sm text-gray-200">
+                    Deployment & hosting management (<span className="font-semibold text-white">Hostinger</span>, Git-based CI/CD).
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3 bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition">
+                  <FaDatabase className="text-yellow-400 mt-1" />
+                  <p className="text-sm text-gray-200">
+                    Database-driven features such as <span className="font-semibold text-white">attendance</span>
+                    and <span className="font-semibold text-white">task management</span>.
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3 bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition">
+                  <FaUsers className="text-pink-400 mt-1" />
+                  <p className="text-sm text-gray-200">
+                    Strong collaboration & version control with <span className="font-semibold text-white">Git/GitHub</span>.
+                  </p>
+                </div>
               </div>
             </Card>
-              <Card
-                title="Latest Projects"
-                titleStyle='text-3xl p-2 font-semibold'
-                cardStyle='overflow-y-scroll max-h-[450px]'
-              >
-                <CardList
-                  title={"Project 1"}
-                  description={"Test project"}
-                  img={GithubLogo}
-                  techs={["React.js", "Laravel"]}
 
-                />
+            <Card
+              title="Latest Projects"
+              titleStyle='text-3xl p-2 font-semibold'
+              cardStyle='overflow-y-hidden max-h-[290px]'
+            >
+              <SimpleBar className='max-h-[350px] ' autoHide={false}>
+                <div className="pb-40">
+                  <CardList
+                    title={"Certicode"}
+                    description={"Internship project: a platform for hosting and joining seminars. Developed the payment system and payment form."}
+                    img={Certicode}
+                    techs={["React.js", "Laravel"]}
+                  />
+                  <CardList
+                    title={"CALC"}
+                    description={"Capstone project: a computational assistance and learning companion leveraging GenAI for interactive problem-solving."}
+                    img={Calc}
+                    techs={["Python", "GenAI"]}
+                  />
 
-                <CardList
-                  title={"Project 1"}
-                  description={"Test project"}
-                  img={GithubLogo}
-                  techs={["React.js", "Laravel"]}
+                  <CardList
+                    link='https://fanx420.github.io/'
+                    title={"Portfolio V1"}
+                    description={"My first personal portfolio showcasing projects and experiments in web development."}
+                    img={PortfolioV1}
+                    techs={["HTML", "CSS", "JavaScript", "Bootstrap"]}
+                  />
 
-                />
+                  <CardList
+                    link='https://fanx420.github.io/Act_02/index.html'
+                    title={"Switzerland Showcase"}
+                    description={"A travel showcase website highlighting Switzerland’s attractions and places to visit."}
+                    img={Switzerland_Showcase}
+                    techs={["HTML", "CSS", "JavaScript", "Bootstrap"]}
+                  />
 
-                <CardList
-                  title={"Project 1"}
-                  description={"Test project"}
-                  img={GithubLogo}
-                  techs={["React.js", "Laravel"]}
+                  <CardList
+                    link='https://fanx420.github.io/Act_03/index.html'
+                    title={"Activities Repository"}
+                    description={"A centralized repository website for storing and accessing web development activities."}
+                    img={ActivityRepo}
+                    techs={["HTML", "CSS", "JavaScript", "Bootstrap"]}
+                  />
 
-                />
+                  <CardList
+                    link='https://fanx420.github.io/Act_04/index.html'
+                    title={"Attack on Titan Database"}
+                    description={"A fan-built database website containing detailed character information from the Attack on Titan series, powered by REST API."}
+                    img={AOTDb}
+                    techs={["HTML", "CSS", "JavaScript", "Bootstrap", "REST API"]}
+                  />
 
-                <CardList
-                  title={"Project 1"}
-                  description={"Test project"}
-                  img={GithubLogo}
-                  techs={["React.js", "Laravel"]}
+                  <CardList
+                    link='https://fanx420.github.io/Act_05/index.html'
+                    title={"Attack on Titan Series Guide"}
+                    description={"A viewing guide website for the Attack on Titan series, providing structured episode and season information using REST API."}
+                    img={AOTGuide}
+                    techs={["HTML", "CSS", "JavaScript", "Bootstrap", "REST API"]}
+                  />
 
-                />
+                  <CardList
+                    link='https://github.com/fanx420/SAM-BE'
+                    title={"Task Management System"}
+                    description={"A web-based task management system with user authentication, task tracking, and MySQL database integration."}
+                    img={TaskManagement}
+                    techs={["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"]}
+                  />
 
-                <CardList
-                  title={"Project 1"}
-                  description={"Test project"}
-                  img={GithubLogo}
-                  techs={["React.js", "Laravel"]}
+                  <CardList
+                    title={"B.I.G.A.S"}
+                    description={"A campaign website raising awareness of SDG 2 (Zero Hunger) with interactive content and database-driven features."}
+                    img={CampaignWebsite}
+                    techs={["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"]}
+                  />
+                </div>
+              </SimpleBar>
 
-                />
-
-
-
-              </Card>
+            </Card>
 
           </div>
 

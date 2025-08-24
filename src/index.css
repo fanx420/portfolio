@@ -2,11 +2,11 @@
 @import "tailwindcss";
 
 :root {
-  @apply bg-black text-white font-sans;
+  @apply bg-black text-white font-sans overflow-y-auto md:overflow-y-hidden;
 }
-ul{
-  @apply flex flex-col md:flex-row hover:bg-amber-50 hover:text-black transition-colors duration-300 rounded-2xl p-2 cursor-pointer;
-}
+/* ul{
+  @apply flex flex-col md:flex-row hover:bg-amber-50 hover:bg-gray-700 transition-colors duration-300 rounded-2xl p-2 cursor-pointer;
+} */
 nav{
   @apply flex flex-col md:flex-row;
 }
