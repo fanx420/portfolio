@@ -157,6 +157,7 @@ function App() {
                     techs={["React.js", "Laravel"]}
                   />
                   <CardList
+                    link='https://github.com/fanx420/CALC'
                     title={"CALC"}
                     description={"Capstone project: a computational assistance and learning companion leveraging GenAI for interactive problem-solving."}
                     img={Calc}
