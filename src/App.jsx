@@ -80,9 +80,9 @@ function App() {
             </Card>
 
             <Card>
-              <iframe className='rounded-3xl' title="Google Map"
+              <iframe className='rounded-3xl w-full h-50 lg:h-45 md:h-35' title="Google Map"
                 src="https://www.google.com/maps/d/u/3/embed?mid=1Re6sFurELVTmByK7U_tGvSLdjt1mPAI&ehbc=2E312F&noprof=1"
-                width="100%" height="170"></iframe>
+                ></iframe>
             </Card>
 
           </div>

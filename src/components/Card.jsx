@@ -26,7 +26,7 @@ export default function Card({ title, description, pills = [], children, image, 
                     <div className="badge mb-4">{badge}</div>
                     <p className="text-lg">{description}</p>
                 </div>
-                <div data-aos="fade-up" className="flex flex-row flex-wrap gap-2 mt-4">
+                <div className="flex flex-row flex-wrap gap-2 mt-4">
                     {pills.map((pill, index) => (
                         <span
                             key={index}

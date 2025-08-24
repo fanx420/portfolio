@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 :root {
-  @apply bg-black text-white font-sans overflow-y-auto md:overflow-y-hidden;
+  @apply bg-black text-white font-sans ;
 }
 /* ul{
   @apply flex flex-col md:flex-row hover:bg-amber-50 hover:bg-gray-700 transition-colors duration-300 rounded-2xl p-2 cursor-pointer;
