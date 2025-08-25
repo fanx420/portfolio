@@ -151,6 +151,7 @@ function App() {
               <SimpleBar className='max-h-[350px] ' autoHide={false}>
                 <div className="pb-40">
                   <CardList
+                  link='https://certicode.tech/'
                     title={"Certicode"}
                     description={"Internship project: a platform for hosting and joining seminars. Developed the payment system and payment form."}
                     img={Certicode}
