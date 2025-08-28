@@ -129,8 +129,7 @@ function App() {
                 <div className="flex items-start gap-3 bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition">
                   <FaDatabase className="text-yellow-400 mt-1" />
                   <p className="text-sm text-gray-200">
-                    Database-driven features such as <span className="font-semibold text-white">attendance</span>
-                    and <span className="font-semibold text-white">task management</span>.
+                    Database-driven features such as <span className="font-semibold text-white">attendance</span> and <span className="font-semibold text-white">task management</span>.
                   </p>
                 </div>
 
