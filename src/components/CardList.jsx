@@ -1,4 +1,4 @@
-export default function CardList({ title, description, img, techs = [], link = "" }) {
+export default function CardList({ title, description, img, role, techs = [], link = "" }) {
   return (
     <a href={link} target="_blank">
       <div className="w-full rounded-xl p-2 hover:bg-gray-700 transition-colors duration-300 flex my-2">
@@ -13,6 +13,7 @@ export default function CardList({ title, description, img, techs = [], link = "
 
         <div className="flex flex-col justify-center ml-4">
           <h3 className="font-semibold text-lg">{title}</h3>
+          <p className="font-semibold text-gray-500">{role}</p>
           <p className="text-sm">{description}</p>
 
           <div className="flex flex-wrap gap-2 mt-2">

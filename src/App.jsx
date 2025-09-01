@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Squares from './components/Squares'
 import Card from './components/Card';
 import ProfileCard from './components/ProfileCard';
-import Avatar from './assets/avatar.svg';
+import Profile from './assets/Profile.png';
 import Icon from "./assets/bg.svg";
 import Modal from './components/Modal';
 import Form from './components/Form';
@@ -59,8 +59,8 @@ function App() {
           <div className="flex flex-col z-10">
             <Card
               background="bg-black"
-              image={Avatar}
-              imageStyle="absolute top-20 left-1/2 -translate-x-1/2 w-[300px] z-0 md:z-0 md:top-5 md:left-[60px] md:translate-x-0 lg:hidden mt-10 md:mt-0"
+              image={Profile}
+              imageStyle="absolute top-20 left-1/2 -translate-x-1/2 w-[300px] z-0 md:z-0 md:top-5 md:left-[60px] md:translate-x-0 lg:hidden mt-10 md:mt-0 rounded-2xl"
               contentStyle='md:mt-30 lg:mt-0 xl:mt-0 p-3'
               title={<>Hello <br />I'm <span className=''>Kaleb</span></>}
               titleStyle="text-center sm:text-center md:text-start mb-55 md:mb-0 lg:mb-0 xl:mb-0 text-6xl relative lg:text-7xl md:text-5xl font-bold"
@@ -95,7 +95,7 @@ function App() {
               handle="kalebdionfrancisz@gmail.com"
               status='Open for full time work'
               iconUrl={Icon}
-              avatarUrl={Avatar}
+              avatarUrl={Profile}
               showUserInfo={true}
               enableTilt={true}
               enableMobileTilt={false}
@@ -152,6 +152,7 @@ function App() {
                   <CardList
                   link='https://certicode.tech/'
                     title={"Certicode"}
+                    role={"Role: Full Stack Developer"}
                     description={"Internship project: a platform for hosting and joining seminars. Developed the payment system and payment form."}
                     img={Certicode}
                     techs={["React.js", "Laravel"]}
