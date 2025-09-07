@@ -82,7 +82,7 @@ function App() {
             <Card>
               <iframe className='rounded-3xl w-full h-50 lg:h-45 md:h-35' title="Google Map"
                 src="https://www.google.com/maps/d/u/3/embed?mid=1Re6sFurELVTmByK7U_tGvSLdjt1mPAI&ehbc=2E312F&noprof=1"
-                ></iframe>
+              ></iframe>
             </Card>
 
           </div>
@@ -150,7 +150,7 @@ function App() {
               <SimpleBar className='max-h-[350px] ' autoHide={false}>
                 <div className="pb-40">
                   <CardList
-                  link='https://certicode.tech/'
+                    link='https://certicode.tech/'
                     title={"Certicode"}
                     role={"Role: Full Stack Developer"}
                     description={"Internship project: a platform for hosting and joining seminars. Developed the payment system and payment form."}
@@ -160,6 +160,7 @@ function App() {
                   <CardList
                     link='https://github.com/fanx420/CALC'
                     title={"CALC"}
+                    role={"Role: Lead Developer"}
                     description={"Capstone project: a computational assistance and learning companion leveraging GenAI for interactive problem-solving."}
                     img={Calc}
                     techs={["Python", "GenAI"]}
@@ -168,6 +169,7 @@ function App() {
                   <CardList
                     link='https://fanx420.github.io/'
                     title={"Portfolio V1"}
+                    role={"Role: Developer"}
                     description={"My first personal portfolio showcasing projects and experiments in web development."}
                     img={PortfolioV1}
                     techs={["HTML", "CSS", "JavaScript", "Bootstrap"]}
@@ -176,6 +178,7 @@ function App() {
                   <CardList
                     link='https://fanx420.github.io/Act_02/index.html'
                     title={"Switzerland Showcase"}
+                    role={"Role: Developer"}
                     description={"A travel showcase website highlighting Switzerland’s attractions and places to visit."}
                     img={Switzerland_Showcase}
                     techs={["HTML", "CSS", "JavaScript", "Bootstrap"]}
@@ -184,6 +187,7 @@ function App() {
                   <CardList
                     link='https://fanx420.github.io/Act_03/index.html'
                     title={"Activities Repository"}
+                    role={"Role: Developer"}
                     description={"A centralized repository website for storing and accessing web development activities."}
                     img={ActivityRepo}
                     techs={["HTML", "CSS", "JavaScript", "Bootstrap"]}
@@ -192,6 +196,7 @@ function App() {
                   <CardList
                     link='https://fanx420.github.io/Act_04/index.html'
                     title={"Attack on Titan Database"}
+                    role={"Role: Developer"}
                     description={"A fan-built database website containing detailed character information from the Attack on Titan series, powered by REST API."}
                     img={AOTDb}
                     techs={["HTML", "CSS", "JavaScript", "Bootstrap", "REST API"]}
@@ -200,6 +205,7 @@ function App() {
                   <CardList
                     link='https://fanx420.github.io/Act_05/index.html'
                     title={"Attack on Titan Series Guide"}
+                    role={"Role: Developer"}
                     description={"A viewing guide website for the Attack on Titan series, providing structured episode and season information using REST API."}
                     img={AOTGuide}
                     techs={["HTML", "CSS", "JavaScript", "Bootstrap", "REST API"]}
@@ -208,6 +214,7 @@ function App() {
                   <CardList
                     link='https://github.com/fanx420/SAM-BE'
                     title={"Task Management System"}
+                    role={"Role: Developer"}
                     description={"A web-based task management system with user authentication, task tracking, and MySQL database integration."}
                     img={TaskManagement}
                     techs={["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"]}
@@ -215,6 +222,7 @@ function App() {
 
                   <CardList
                     title={"B.I.G.A.S"}
+                    role={"Role: Developer"}
                     description={"A campaign website raising awareness of SDG 2 (Zero Hunger) with interactive content and database-driven features."}
                     img={CampaignWebsite}
                     techs={["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"]}
