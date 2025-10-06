@@ -25,6 +25,7 @@ import Certicode from './assets/Thumbnails/Certicode.png'
 import SimpleBar from "simplebar-react";
 import "simplebar-react/dist/simplebar.min.css";
 import { FaCode, FaServer, FaCloudUploadAlt, FaDatabase, FaUsers } from "react-icons/fa";
+import ChatBot from './components/ChatBot';
 
 function App() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -236,6 +237,7 @@ function App() {
 
         </div>
       </div>
+      <ChatBot/>
       <Modal
         isOpen={modalIsOpen}
         setIsOpen={setModalIsOpen}
