@@ -55,7 +55,7 @@ export default function Bot() {
             options: ["Tech Stack", "Projects", "About Me"],
             path: (params) => params.userInput
         },
-       " About Me": {
+       "About Me": {
             message: "Full Stack Developer",
             options: ["Tech Stack", "Projects", "About Me"],
             path: (params) => params.userInput
