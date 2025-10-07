@@ -17,8 +17,14 @@ export default function Bot() {
         chatHistory: {
             disabled: true,
         },
+        chatButton: {
+            icon: Avatar
+        },
         notification: {
             disabled: true
+        },
+        tooltip: {
+            text: "Ask Me"
         }
 
     }
@@ -47,7 +53,7 @@ export default function Bot() {
         "About Me": {
             message: "Full Stack Developer",
             options: ["Tech Stack", "Projects", "About Me"],
-            path: (params) => params.userInput 
+            path: (params) => params.userInput
         },
     };
 
