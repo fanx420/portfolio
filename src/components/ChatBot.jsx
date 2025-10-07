@@ -1,8 +1,12 @@
-import ChatBot from "react-chatbotify";
-import Avatar from "../assets/avatar.png"
+import React, { lazy, Suspense } from "react";
+import Avatar from "../assets/avatar.png";
+
+// Lazy-load the ChatBot component
+const ChatBot = lazy(() => import("react-chatbotify"));
 
 export default function Bot() {
     const id = "chatbot";
+
     const settings = {
         header: {
             title: "Fanx",
@@ -11,11 +15,12 @@ export default function Bot() {
         botBubble: {
             avatar: Avatar,
             showAvatar: true
-        }, general: {
+        },
+        general: {
             showFooter: false
         },
         chatHistory: {
-            disabled: true,
+            disabled: true
         },
         chatButton: {
             icon: Avatar
@@ -26,39 +31,40 @@ export default function Bot() {
         tooltip: {
             text: "Ask Me"
         }
+    };
 
-    }
     const styles = {
         headerStyle: {
-            background: "#06022ff2",
+            background: "#06022ff2"
         }
-    }
+    };
+
     const flow = {
-        "start": {
+        start: {
             message: "Sup, I'm Fanx how can I help you",
             options: ["Tech Stack", "Projects", "About Me"],
             path: (params) => params.userInput
         },
-        "Tech Stack": {
+        TechStack: {
             message: "React.js, Laravel",
             options: ["Tech Stack", "Projects", "About Me"],
             path: (params) => params.userInput
-
         },
-        "Projects": {
+        Projects: {
             message: "Website",
             options: ["Tech Stack", "Projects", "About Me"],
             path: (params) => params.userInput
         },
-        "About Me": {
+        AboutMe: {
             message: "Full Stack Developer",
             options: ["Tech Stack", "Projects", "About Me"],
             path: (params) => params.userInput
-        },
+        }
     };
 
     return (
-        <ChatBot id={id} flow={flow} settings={settings} styles={styles} />
-    )
-
+        <Suspense fallback={<div style={{ color: "white" }}>Loading chatbot...</div>}>
+            <ChatBot id={id} flow={flow} settings={settings} styles={styles} />
+        </Suspense>
+    );
 }
