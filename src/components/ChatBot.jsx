@@ -45,17 +45,17 @@ export default function Bot() {
             options: ["Tech Stack", "Projects", "About Me"],
             path: (params) => params.userInput
         },
-        TechStack: {
+        "Tech Stack": {
             message: "React.js, Laravel",
             options: ["Tech Stack", "Projects", "About Me"],
             path: (params) => params.userInput
         },
-        Projects: {
+        "Projects": {
             message: "Website",
             options: ["Tech Stack", "Projects", "About Me"],
             path: (params) => params.userInput
         },
-        AboutMe: {
+       " About Me": {
             message: "Full Stack Developer",
             options: ["Tech Stack", "Projects", "About Me"],
             path: (params) => params.userInput
