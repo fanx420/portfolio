@@ -36,6 +36,9 @@ export default function Bot() {
     const styles = {
         headerStyle: {
             background: "#06022ff2"
+        },
+        chatWindowStyle: {
+            background: "#8a92eeff"
         }
     };
 
