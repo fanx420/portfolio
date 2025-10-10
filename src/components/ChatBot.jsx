@@ -49,7 +49,7 @@ export default function Bot() {
             path: (params) => params.userInput
         },
         "💻 Tech Stack": {
-            message: "I work with a modern web development stack! 💡\n\nFrontend: HTML, CSS, JavaScript, React.js, Next.js, Tailwind CSS\nBackend: PHP, Laravel\nDatabase: MySQL\nTools: Git, VSCode.",
+            message: "I work with a modern web development stack! 💡\n\nFrontend: HTML, CSS, JavaScript, React.js, Tailwind CSS\nBackend: PHP, Laravel\nDatabase: MySQL\nTools: Git, VSCode.",
             options: ["🚀 Projects", "👨‍💻 About Me", "🏠 Start Over"],
             path: (params) => params.userInput
         },
