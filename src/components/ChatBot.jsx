@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import Avatar from "../assets/avatar.png";
+import Logo from "../assets/logo.svg";
 
 // Lazy-load the ChatBot component
 const ChatBot = lazy(() => import("react-chatbotify"));
@@ -23,7 +24,7 @@ export default function Bot() {
             disabled: true
         },
         chatButton: {
-            icon: Avatar
+            icon: Logo
         },
         notification: {
             disabled: true
@@ -39,6 +40,9 @@ export default function Bot() {
         },
         chatWindowStyle: {
             background: "#8a92eeff"
+        },
+        chatButtonStyle: {
+            background: "#06022ff2",
         }
     };
 
