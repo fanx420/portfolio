@@ -30,7 +30,7 @@ export default function Bot() {
             disabled: true
         },
         tooltip: {
-            text: "Ask Me"
+            text: "Learn more"
         }
     };
 
