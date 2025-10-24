@@ -55,9 +55,10 @@ function App() {
           />
         </div>
 
-        <div className="relative grid grid-cols-1 md:grid-cols-2 p-4">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 p-4 min-h-screen items-center justify-center">
+
           {/* Left side */}
-          <div className="flex flex-col z-10">
+          <div className="flex flex-col z-10 lg:w-full">
             <Card
               background="bg-black"
               image={Profile}
@@ -237,7 +238,7 @@ function App() {
 
         </div>
       </div>
-      <ChatBot/>
+      <ChatBot />
       <Modal
         isOpen={modalIsOpen}
         setIsOpen={setModalIsOpen}
