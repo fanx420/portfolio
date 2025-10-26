@@ -243,7 +243,7 @@ function App() {
         isOpen={modalIsOpen}
         setIsOpen={setModalIsOpen}
       >
-        <h1 className='font-bold text-3xl'>Get in touch</h1>
+        <h1 className='font-bold text-3xl mb-2'>Get in touch</h1>
         <p className='text-gray-400 mb-4'>I'd love to hear from you! Please fill out the form below to send me a message.</p>
 
         <Form />
